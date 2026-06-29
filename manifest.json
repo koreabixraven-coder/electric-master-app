@@ -4,8 +4,8 @@
   "description": "전기기능장 TTS 기출 반복학습 앱",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#121212",
-  "theme_color": "#1D9E75",
+  "background_color": "#0B1F3A",
+  "theme_color": "#0B1F3A",
   "orientation": "any",
   "lang": "ko",
   "icons": [

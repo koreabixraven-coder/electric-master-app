@@ -1,8 +1,9 @@
 # electric-master-app
 
-전기기능장 TTS 반복학습 앱 v1.00 PIPE_BASE
+전기기능장 TTS 반복학습 앱 v1.01 ELECTRIC_ICON
 
 ## 기준
+- v1.01: 전기기능장 전용 번개 아이콘/브랜드 색상 적용
 - 배관기능장 안정본 TTS 로직 기반
 - 전기기능장 데이터 초기화 기준본
 - GitHub Pages/PWA 구조 유지
