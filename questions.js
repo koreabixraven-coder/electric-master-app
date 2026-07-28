@@ -1,5 +1,5 @@
-/* electric-master questions.js · v1.00 PIPE_BASE 샘플 DB
-   배관기능장 검증 TTS 로직 위에 전기기능장 샘플 데이터만 탑재했습니다. */
+/* electric-master questions.js · v1.02 MENU_FINAL 샘플 DB
+   문제 데이터는 변경하지 않고 메뉴 분류만 기능사·산업기사·기사·기능장 및 중복문제로 재구성했습니다. */
 const DB = {
   "전기_전기이론": [
     {

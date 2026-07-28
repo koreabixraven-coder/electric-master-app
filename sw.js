@@ -1,4 +1,4 @@
-const CACHE_NAME = 'electric-master-v1-01-electric-icon';
+const CACHE_NAME = 'electric-master-v1-02-menu-final';
 const ASSETS = [
   './',
   './index.html',
@@ -105,4 +105,4 @@ self.addEventListener('fetch', e => {
 //   모의고사 점수(scoreData) localStorage 영속 저장 추가 (pipe_master_score_v31_21).
 //   가로모드 문제풀이 2분할: 문제 상단고정 + 보기/해설 하단독립스크롤. quizTtsFocus 스크롤 대상 분리.
 
-// v1.01: 전기기능장 전용 앱 아이콘/브랜드 색상 적용. TTS 자동읽기 로직 변경 없음.
+// v1.02: 메인 3분류, 문제풀이 4등급, 심화학습 5개 중복문제 메뉴 적용. 기존 TTS/데이터 유지.

@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0B1F3A">
-<!-- v1.01 ELECTRIC_ICON: 전기기능장 전용 아이콘/브랜드 색상 적용, TTS 로직 무변경 -->
+<!-- v1.02 MENU_FINAL: 레이아웃·기존 이론·TTS 유지, 문제풀이/심화학습 메뉴 분리 -->
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <title>RavenBix · 전기기능장</title>
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="manifest.json?v=1.02">
 <link rel="apple-touch-icon" href="icon-192.png">
-<script src="theory.js"></script>
-<script src="questions.js?v=1.00"></script>
+<script src="theory.js?v=1.02"></script>
+<script src="questions.js?v=1.02"></script>
 <script>
 /* ── v30.22 패드 화면 확장 설정 선적용 ── */
 (function(){
@@ -177,16 +177,19 @@
   .home-card:active{transform:scale(0.98);}
   .home-card.theory{border-color:#1D9E75;}
   .home-card.quiz{border-color:#378ADD;}
+  .home-card.advanced{border-color:#BA7517;}
   .hc-top{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
   .hc-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;}
   .hc-icon.th{background:#0A2E22;}
   .hc-icon.qz{background:#0C2D4A;}
+  .hc-icon.ad{background:#2B1B08;}
   .hc-title{font-size:16px;font-weight:600;color:#E0E0E0;}
   .hc-sub{font-size:12px;color:#555;line-height:1.5;}
   .hc-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px;}
   .hc-tag{font-size:10px;padding:3px 8px;border-radius:99px;border:0.5px solid #2A2A2A;color:#666;}
   .hc-tag.th{border-color:#1D9E75;color:#5DCAA5;}
   .hc-tag.qz{border-color:#378ADD;color:#85B7EB;}
+  .hc-tag.ad{border-color:#BA7517;color:#FAC775;}
 
   /* ── 홈 빠른 실행 버튼 ── */
   .home-quick-actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:14px 0 4px;}
@@ -1433,12 +1436,12 @@
 <div class="settings-backdrop" id="settingsBackdrop" onclick="closeSettings(event)"></div>
   <!-- 설정 패널 -->
   <div class="settings-panel global-settings" id="settingsPanel" onclick="event.stopPropagation()">
-    <div class="settings-head"><div class="settings-head-title">⚙ 음성·자동진행 설정 <span style="font-size:10px;color:#BA7517;">v2.00 PIPE_BASE ENERGY_GAS</span></div><button class="settings-close" onclick="closeSettings(event)">×</button></div>
+    <div class="settings-head"><div class="settings-head-title">⚙ 음성·자동진행 설정 <span style="font-size:10px;color:#BA7517;">v1.02 ELECTRIC_MASTER MENU_FINAL</span></div><button class="settings-close" onclick="closeSettings(event)">×</button></div>
     <div class="settings-save-row">
       <button class="test-btn save-main" onclick="saveSettingsFromUI()">💾 설정 저장</button>
       <button class="test-btn restore-main" onclick="resetSettingsToDefault()">↩ 기본값 복원</button>
     </div>
-    <p class="s-hint" style="color:#9FE1CB;">v2.00 PIPE_BASE ENERGY_GAS. 휴대폰 이동중청취 노터치/전체화면을 보강했습니다.</p>
+    <p class="s-hint" style="color:#9FE1CB;">v1.02 ELECTRIC_MASTER MENU_FINAL. 휴대폰 이동중청취 노터치/전체화면을 보강했습니다.</p>
 <div class="settings-dirty-note" id="settingsDirtyNote">변경사항이 있습니다. 저장 버튼을 눌러야 다음 실행에도 유지됩니다.</div>
 
     <div class="s-title">
@@ -1589,38 +1592,48 @@
       </button>
     </div>
 
-    <!-- 2행: 이론 학습 카드 -->
+    <!-- 메인 메뉴: 이론학습 · 문제풀이 · 심화학습 -->
     <div class="home-menu clean">
       <div class="home-card theory" onclick="goScreen('screenTheory')">
         <div class="hc-top">
           <div class="hc-icon th">📖</div>
-          <div>
-            <div class="hc-title">이론 학습</div>
-          </div>
+          <div><div class="hc-title">이론학습</div></div>
         </div>
-        <div class="hc-sub">전기기능장 필기 7과목과 계산·공식 핵심 이론을 TTS로 들으며 학습합니다.</div>
+        <div class="hc-sub">기존 전기 이론과 계산·공식 특훈, 안전·법규 핵심, 시험 직전 압축을 TTS로 학습합니다.</div>
         <div class="hc-tags">
-          <span class="hc-tag th">전기이론</span>
-          <span class="hc-tag th">전기기기</span>
-          <span class="hc-tag th">공통핵심</span>
-          <span class="hc-tag th">법규</span>
-          <span class="hc-tag th">실기준비</span>
+          <span class="hc-tag th">기존 이론 유지</span>
+          <span class="hc-tag th">계산·공식</span>
+          <span class="hc-tag th">안전·법규</span>
+          <span class="hc-tag th">시험 직전 압축</span>
         </div>
       </div>
 
-      <!-- 3행: 문제 풀이 카드 -->
-      <div class="home-card quiz" onclick="goScreen('screenQuizToc')">
+      <div class="home-card quiz" onclick="openQuizMenu('exam')">
         <div class="hc-top">
           <div class="hc-icon qz">✏️</div>
-          <div>
-            <div class="hc-title">문제 풀이</div>
-          </div>
+          <div><div class="hc-title">문제풀이</div></div>
         </div>
-        <div class="hc-sub">전기기능장 기출문제를 문제→보기→3초대기→정답/해설 순서로 반복 청취합니다.</div>
+        <div class="hc-sub">자격등급을 선택한 뒤 해당 기출문제와 문제 묶음을 반복 학습합니다.</div>
         <div class="hc-tags">
-          <span class="hc-tag qz">기출</span>
-          <span class="hc-tag qz">계산</span>
-          <span class="hc-tag qz">중복출제 핵심</span>
+          <span class="hc-tag qz">기능사</span>
+          <span class="hc-tag qz">산업기사</span>
+          <span class="hc-tag qz">기사</span>
+          <span class="hc-tag qz">기능장</span>
+        </div>
+      </div>
+
+      <div class="home-card advanced" onclick="openQuizMenu('advanced')">
+        <div class="hc-top">
+          <div class="hc-icon ad">★</div>
+          <div><div class="hc-title">심화학습</div></div>
+        </div>
+        <div class="hc-sub">자격등급별 중복문제와 등급 간 공통으로 반복 출제된 통합 중복문제를 학습합니다.</div>
+        <div class="hc-tags">
+          <span class="hc-tag ad">기능사 중복</span>
+          <span class="hc-tag ad">산업기사 중복</span>
+          <span class="hc-tag ad">기사 중복</span>
+          <span class="hc-tag ad">기능장 중복</span>
+          <span class="hc-tag ad">통합 중복</span>
         </div>
       </div>
     </div>
@@ -1737,8 +1750,8 @@
       </div>
     </div>
     <div class="quiz-stage-head">
-      <div class="quiz-stage-title">문제 풀이 목차</div>
-      <div class="quiz-stage-sub">기출문제와 기출회차 중 먼저 풀 목차를 선택합니다.</div>
+      <div class="quiz-stage-title" id="quizTocTitle">문제풀이</div>
+      <div class="quiz-stage-sub" id="quizTocSub">자격등급을 선택합니다.</div>
     </div>
     <div class="quiz-toc-list" id="quizTocList"></div>
   </div>
@@ -1758,7 +1771,7 @@
         </button>
       </div>
     </div>
-    <button class="theory-back-mini quiz-return-btn" onclick="goScreen('screenQuizToc')">← 문제풀이 돌아가기</button>
+    <button class="theory-back-mini quiz-return-btn" id="quizStageBackBtn" onclick="goScreen('screenQuizToc')">← 문제풀이 돌아가기</button>
     <div class="quiz-stage-head">
       <div class="quiz-stage-title" id="quizStageTitle">문제 단계 선택</div>
       <div class="quiz-stage-sub" id="quizStageSub">1단계부터 4단계까지 선택합니다.</div>
@@ -1998,7 +2011,7 @@ applyRestoreRepeatPatch();
    기출회차(41~62회)와 기출복원(2019~2025)에서 2회 이상 출제된 문제를
    고유 클러스터로 취합하여 가상 DB 레벨을 생성합니다. */
 function buildRepeatQuizDB(){
-  /* v2.00 ENERGY_GAS PIPE_BASE
+  /* v1.02 ELECTRIC_MASTER MENU_FINAL
      샘플 DB에 포함된 _repeatRefs와 별도 중복핵심 레벨을 그대로 사용합니다.
      실제 기출 데이터 입력 후에는 전기기능장 과목별/중복 반복문제 빌더로 확장합니다. */
   try{
@@ -2910,25 +2923,56 @@ function theoryReadAll(manualStart=true){
 }
 
 
-/* ── v24 문제풀이 목차/서브메뉴. DB와 풀이 로직은 기존 그대로 사용 ── */
-let curQuizGroup='전기기능장 필기';
+/* ── v1.02 문제풀이/심화학습 메뉴 분리. 문제 데이터와 풀이/TTS 로직은 유지 ── */
+let curQuizMenu='exam';
+let curQuizGroup='기능장';
 let quizPrepared=false;
-const QUIZ_GROUPS=[
-  {key:'전기기능장 필기', icon:'E', desc:'전기이론·전기기기·전력전자·설비설계시공·송배전·디지털공학·공업경영 샘플 문제를 훈련합니다.', levels:['전기_전기이론','전기_전기기기','전기_전력전자','전기_전기설비설계시공','전기_송배전공학','전기_디지털공학','전기_공업경영'], labels:['전기이론','전기기기','전력전자','전기설비설계 및 시공','송·배전공학','디지털공학','공업경영']},
-  {key:'계산·공식 특훈', icon:'C', desc:'전기기능장 계산문제·공식암기·단위변환을 따로 반복청취합니다.', levels:['공통_계산문제','공통_공식암기','공통_단위변환'], labels:['계산문제 특훈','공식암기','단위변환']},
-  {key:'안전·법규 핵심', icon:'S', desc:'전기설비 안전, 접지, 작업 전 검전 등 안전·법규 핵심을 훈련합니다.', levels:['공통_안전법규'], labels:['안전·법규 핵심']},
-  {key:'중복출제 핵심문제', icon:'★', desc:'전기기능장 중복출제 핵심과 계산 중복문제를 따로 모아 반복청취합니다.', levels:['전기_중복핵심','계산_중복핵심','시험직전_압축'], labels:['전기 중복출제 핵심','계산 중복 핵심','시험직전 압축']}
+
+const EXAM_QUIZ_GROUPS=[
+  {key:'기능사', icon:'F', desc:'전기기능사 기출문제와 회차별 문제를 학습합니다.', levels:[], labels:[]},
+  {key:'산업기사', icon:'I', desc:'전기산업기사 기출문제와 회차별 문제를 학습합니다.', levels:[], labels:[]},
+  {key:'기사', icon:'E', desc:'전기기사 기출문제와 회차별 문제를 학습합니다.', levels:[], labels:[]},
+  {key:'기능장', icon:'M', desc:'현재 탑재된 전기기능장 과목별 문제를 학습합니다.', levels:['전기_전기이론','전기_전기기기','전기_전력전자','전기_전기설비설계시공','전기_송배전공학','전기_디지털공학','전기_공업경영'], labels:['전기이론','전기기기','전력전자','전기설비설계 및 시공','송·배전공학','디지털공학','공업경영']}
 ];
+
+const ADVANCED_QUIZ_GROUPS=[
+  {key:'기능사 중복문제', icon:'F', desc:'전기기능사에서 반복 출제된 대표문제를 학습합니다.', levels:[], labels:[]},
+  {key:'산업기사 중복문제', icon:'I', desc:'전기산업기사에서 반복 출제된 대표문제를 학습합니다.', levels:[], labels:[]},
+  {key:'기사 중복문제', icon:'E', desc:'전기기사에서 반복 출제된 대표문제를 학습합니다.', levels:[], labels:[]},
+  {key:'기능장 중복문제', icon:'M', desc:'전기기능장에서 반복 출제된 핵심문제를 학습합니다.', levels:['전기_중복핵심','계산_중복핵심'], labels:['전기 중복출제 핵심','계산 중복 핵심']},
+  {key:'통합 중복문제', icon:'★', desc:'기능사·산업기사·기사·기능장에 공통으로 출제된 중복문제를 학습합니다.', levels:[], labels:[]}
+];
+
+/* 기존 외부 참조 호환용. 활성 메뉴는 getActiveQuizGroups()에서 결정합니다. */
+const QUIZ_GROUPS=[...EXAM_QUIZ_GROUPS,...ADVANCED_QUIZ_GROUPS];
+
+function getActiveQuizGroups(){
+  return curQuizMenu==='advanced'?ADVANCED_QUIZ_GROUPS:EXAM_QUIZ_GROUPS;
+}
+function openQuizMenu(menu){
+  curQuizMenu=(menu==='advanced')?'advanced':'exam';
+  const groups=getActiveQuizGroups();
+  curQuizGroup=groups.length?groups[0].key:'';
+  goScreen('screenQuizToc');
+}
+function findQuizGroupByLevel(lv){
+  for(const g of EXAM_QUIZ_GROUPS){ if(g.levels.includes(lv)) return {group:g,menu:'exam'}; }
+  for(const g of ADVANCED_QUIZ_GROUPS){ if(g.levels.includes(lv)) return {group:g,menu:'advanced'}; }
+  return {group:EXAM_QUIZ_GROUPS[0],menu:'exam'};
+}
 buildRepeatQuizDB();
 function getQuizLevelLabel(lv){
   for(const g of QUIZ_GROUPS){
     const i=g.levels.indexOf(lv);
-    if(i>=0) return String(g.labels[i]||'').startsWith(g.key)?g.labels[i]:(g.key+' '+g.labels[i]);
+    if(i>=0) return String(g.labels[i]||lv);
   }
   return lv;
 }
-function getQuizGroupByKey(key){return QUIZ_GROUPS.find(g=>g.key===key)||QUIZ_GROUPS[0];}
-function getQuizGroupByLevel(lv){return QUIZ_GROUPS.find(g=>g.levels.includes(lv))||QUIZ_GROUPS[0];}
+function getQuizGroupByKey(key){
+  const groups=getActiveQuizGroups();
+  return groups.find(g=>g.key===key)||groups[0];
+}
+function getQuizGroupByLevel(lv){ return findQuizGroupByLevel(lv).group; }
 function calcQuizStats(levels){
   let ok=0, ng=0;
   levels.forEach(lv=>{
@@ -2949,8 +2993,15 @@ function statHtml(stats){
 function buildQuizToc(){
   const list=document.getElementById('quizTocList');
   if(!list) return;
+  const groups=getActiveQuizGroups();
+  const tocTitle=document.getElementById('quizTocTitle');
+  const tocSub=document.getElementById('quizTocSub');
+  if(tocTitle) tocTitle.textContent=curQuizMenu==='advanced'?'심화학습':'문제풀이';
+  if(tocSub) tocSub.textContent=curQuizMenu==='advanced'
+    ?'자격등급별 중복문제 또는 통합 중복문제를 선택합니다.'
+    :'기능사·산업기사·기사·기능장 중에서 선택합니다.';
   list.innerHTML='';
-  QUIZ_GROUPS.forEach(g=>{
+  groups.forEach(g=>{
     const count=g.levels.reduce((a,lv)=>a+((DB[lv]&&DB[lv].length)||0),0);
     const stats=calcQuizStats(g.levels);
     const div=document.createElement('div');
@@ -2959,7 +3010,7 @@ function buildQuizToc(){
       +'<div class="quiz-toc-info">'
       +'<div class="quiz-toc-title">'+g.key+'</div>'
       +'<div class="quiz-toc-desc">'+g.desc+' · '+count+'문제</div>'
-      +statHtml(stats)
+      +(count?statHtml(stats):'')
       +'</div>'
       +'<svg class="quiz-toc-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>';
     div.onclick=()=>{curQuizGroup=g.key; goScreen('screenQuizStage');};
@@ -2970,18 +3021,20 @@ function buildQuizStage(){
   const g=getQuizGroupByKey(curQuizGroup);
   const title=document.getElementById('quizStageTitle');
   const sub=document.getElementById('quizStageSub');
+  const back=document.getElementById('quizStageBackBtn');
   const list=document.getElementById('quizStageList');
-  if(title) title.textContent=g.key+' 문제풀이';
-  if(sub) sub.textContent=g.key+' 목차를 선택합니다.';
+  if(title) title.textContent=g.key;
+  if(sub) sub.textContent=g.key+' 하위 문제 묶음을 선택합니다.';
+  if(back) back.textContent=curQuizMenu==='advanced'?'← 심화학습 돌아가기':'← 문제풀이 돌아가기';
   if(!list) return;
   list.innerHTML='';
   if(!g.levels.length){
     const div=document.createElement('div');
-    div.className='quiz-toc-card';
+    div.className='quiz-toc-card disabled';
     div.innerHTML='<span class="quiz-toc-icon">!</span>'
       +'<div class="quiz-toc-info">'
       +'<div class="quiz-toc-title">자료 입력 대기</div>'
-      +'<div class="quiz-toc-desc">이 구간은 아직 문제 데이터가 없습니다. 새 기출 PDF가 올라오면 이 메뉴에 추가합니다.</div>'
+      +'<div class="quiz-toc-desc">이 메뉴는 완성되어 있으며 문제 데이터 추가를 기다리고 있습니다.</div>'
       +'</div>';
     list.appendChild(div);
     return;
@@ -2993,7 +3046,7 @@ function buildQuizStage(){
     const div=document.createElement('div');
     div.className='quiz-toc-card'+(exists?'':' disabled');
     const titleText=String(g.labels[i]||lv);
-    const descText=exists ? (lv+' · '+count+'문제') : '업로드 예정 · 데이터 입력 대기';
+    const descText=exists ? (count+'문제') : '업로드 예정 · 데이터 입력 대기';
     div.innerHTML='<span class="quiz-toc-icon">'+(i+1)+'</span>'
       +'<div class="quiz-toc-info">'
       +'<div class="quiz-toc-title">'+titleText+'</div>'
@@ -3007,7 +3060,9 @@ function buildQuizStage(){
 }
 function prepareQuizLevel(lv){
   curLevel=lv;
-  curQuizGroup=getQuizGroupByLevel(lv).key;
+  const found=findQuizGroupByLevel(lv);
+  curQuizMenu=found.menu;
+  curQuizGroup=found.group.key;
   Qs=DB[curLevel]||[];
   cur=0;
   answered=false;
@@ -3033,7 +3088,9 @@ function startQuizLevel(lv){
 function returnToQuizStage(){
   tStop();
   if(driveOn) toggleDrive();
-  curQuizGroup=getQuizGroupByLevel(curLevel).key;
+  const found=findQuizGroupByLevel(curLevel);
+  curQuizMenu=found.menu;
+  curQuizGroup=found.group.key;
   goScreen('screenQuizStage');
 }
 function updateQuizCurrentTitle(){
@@ -4675,7 +4732,7 @@ setTimeout(updateHomeCounts,200);
 /* Service Worker 등록 */
 if('serviceWorker' in navigator){
   window.addEventListener('load', ()=>{
-    navigator.serviceWorker.register('sw.js?v=31.22')
+    navigator.serviceWorker.register('sw.js?v=1.02', {updateViaCache:'none'})
       .then(()=>console.log('SW 등록 완료'))
       .catch(e=>console.log('SW 등록 실패',e));
   });
