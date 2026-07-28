@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0B1F3A">
-<!-- v1.05 INDUSTRIAL_20020310: 기존 레이아웃·이론·TTS 로직 유지, 전기산업기사 2002-03-10 기출 100문제 추가 -->
+<!-- v1.08 MASTER_20070401: 기존 레이아웃·이론·TTS 로직 유지, 전기기능장 2007-04-01 기출 60문제 추가 -->
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <title>RavenBix · 전기기능장</title>
-<link rel="manifest" href="manifest.json?v=1.05">
+<link rel="manifest" href="manifest.json?v=1.08">
 <link rel="apple-touch-icon" href="icon-192.png">
-<script src="theory.js?v=1.05"></script>
-<script src="questions.js?v=1.05"></script>
+<script src="theory.js?v=1.08"></script>
+<script src="questions.js?v=1.08"></script>
 <script>
 /* ── v30.22 패드 화면 확장 설정 선적용 ── */
 (function(){
@@ -611,11 +611,11 @@
   .quiz-logo-ico.qli-read svg,.quiz-logo-ico.qli-play svg{fill:currentColor;stroke:none;}
   .quiz-logo-ico.qli-stop{border-color:#5A2B2B;background:#2A1111;color:#FFB0B0;}
   .quiz-logo-ico.qli-drive.active{background:#0A2E22;border-color:#1D9E75;color:#9FE1CB;}
-  .quiz-logo-ico.qli-jump{border-color:#27445F;background:#0C1B2A;color:#A8D2FF;font-size:11px;font-weight:800;line-height:1.05;letter-spacing:-0.5px;}
+  .quiz-logo-ico.qli-jump{border-color:#27445F;background:#0C1B2A;color:#A8D2FF;font-size:11px;font-weight:800;line-height:1.06;letter-spacing:-0.5px;}
   .quiz-logo-ico.qli-jump span{display:block;text-align:center;}
   .quiz-jump-action{background:#0C1B2A!important;border-color:#378ADD!important;color:#A8D2FF!important;}
 
-  /* ── v31.05 문제 번호 이동 패널 ── */
+  /* ── v31.06 문제 번호 이동 패널 ── */
   .qjump-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:2100;padding:14px;box-sizing:border-box;align-items:center;justify-content:center;}
   .qjump-backdrop.show{display:flex;}
   .qjump-sheet{width:min(100%,520px);max-height:calc(100vh - 28px);overflow:auto;background:#111;border:0.5px solid #2A2A2A;border-radius:18px;box-shadow:0 14px 44px rgba(0,0,0,.65);padding:14px;box-sizing:border-box;}
@@ -624,7 +624,7 @@
   .qjump-sub{font-size:11px;color:#888;line-height:1.45;}
   .qjump-close{width:38px;height:38px;border-radius:11px;border:0.5px solid #3A1515;background:#1A1A1A;color:#E24B4A;font-size:18px;cursor:pointer;flex-shrink:0;}
   .qjump-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;}
-  .qjump-num{min-height:42px;border-radius:11px;border:0.5px solid #2A2A2A;background:#181818;color:#D9D9D9;font-size:13px;font-weight:800;cursor:pointer;-webkit-tap-highlight-color:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;line-height:1.05;position:relative;overflow:hidden;}
+  .qjump-num{min-height:42px;border-radius:11px;border:0.5px solid #2A2A2A;background:#181818;color:#D9D9D9;font-size:13px;font-weight:800;cursor:pointer;-webkit-tap-highlight-color:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;line-height:1.06;position:relative;overflow:hidden;}
   .qjump-num:active{transform:scale(.97);}
   .qjump-num.active{background:#0C2D4A;border-color:#378ADD;color:#A8D2FF;box-shadow:0 0 0 1px rgba(55,138,221,.25);}
   .qjump-main-num{display:block;font-size:13px;font-weight:900;letter-spacing:-0.2px;}
@@ -1441,12 +1441,12 @@
 <div class="settings-backdrop" id="settingsBackdrop" onclick="closeSettings(event)"></div>
   <!-- 설정 패널 -->
   <div class="settings-panel global-settings" id="settingsPanel" onclick="event.stopPropagation()">
-    <div class="settings-head"><div class="settings-head-title">⚙ 음성·자동진행 설정 <span style="font-size:10px;color:#BA7517;">v1.05 ELECTRIC_MASTER INDUSTRIAL_20020310</span></div><button class="settings-close" onclick="closeSettings(event)">×</button></div>
+    <div class="settings-head"><div class="settings-head-title">⚙ 음성·자동진행 설정 <span style="font-size:10px;color:#BA7517;">v1.08 ELECTRIC_MASTER MASTER_20070401</span></div><button class="settings-close" onclick="closeSettings(event)">×</button></div>
     <div class="settings-save-row">
       <button class="test-btn save-main" onclick="saveSettingsFromUI()">💾 설정 저장</button>
       <button class="test-btn restore-main" onclick="resetSettingsToDefault()">↩ 기본값 복원</button>
     </div>
-    <p class="s-hint" style="color:#9FE1CB;">v1.05 ELECTRIC_MASTER INDUSTRIAL_20020310. 휴대폰 이동중청취 노터치/전체화면을 보강했습니다.</p>
+    <p class="s-hint" style="color:#9FE1CB;">v1.08 ELECTRIC_MASTER MASTER_20070401. 휴대폰 이동중청취 노터치/전체화면을 보강했습니다.</p>
 <div class="settings-dirty-note" id="settingsDirtyNote">변경사항이 있습니다. 저장 버튼을 눌러야 다음 실행에도 유지됩니다.</div>
 
     <div class="s-title">
@@ -2019,7 +2019,7 @@ applyRestoreRepeatPatch();
    기출회차(41~62회)와 기출복원(2019~2025)에서 2회 이상 출제된 문제를
    고유 클러스터로 취합하여 가상 DB 레벨을 생성합니다. */
 function buildRepeatQuizDB(){
-  /* v1.05 ELECTRIC_MASTER INDUSTRIAL_20020310
+  /* v1.08 ELECTRIC_MASTER MASTER_20070401
      샘플 DB에 포함된 _repeatRefs와 별도 중복핵심 레벨을 그대로 사용합니다.
      실제 기출 데이터 입력 후에는 전기기능장 과목별/중복 반복문제 빌더로 확장합니다. */
   try{
@@ -2931,16 +2931,16 @@ function theoryReadAll(manualStart=true){
 }
 
 
-/* ── v1.05 문제풀이/심화학습 메뉴 유지 + 전기산업기사 2002-03-10 기출 연결 ── */
+/* ── v1.08 문제풀이/심화학습 메뉴 유지 + 전기기능장 2007-04-01 기출 연결 ── */
 let curQuizMenu='exam';
 let curQuizGroup='기능장';
 let quizPrepared=false;
 
 const EXAM_QUIZ_GROUPS=[
-  {key:'기능사', icon:'F', desc:'전기기능사 기출문제와 회차별 문제를 학습합니다.', levels:[], labels:[]},
+  {key:'기능사', icon:'F', desc:'전기기능사 기출문제와 회차별 문제를 학습합니다.', levels:['기능사_2002_04_07'], labels:['2002년 04월 07일 필기 기출문제']},
   {key:'산업기사', icon:'I', desc:'전기산업기사 기출문제와 회차별 문제를 학습합니다.', levels:['산업기사_2002_03_10'], labels:['2002년 03월 10일 필기 기출문제']},
   {key:'기사', icon:'E', desc:'전기기사 기출문제와 회차별 문제를 학습합니다.', levels:['기사_2003_03_16'], labels:['2003년 03월 16일 필기 기출문제']},
-  {key:'기능장', icon:'M', desc:'전기기능장 필기 기출문제를 회차별로 학습합니다.', levels:['기능장_2006_04_02'], labels:['2006년 04월 02일 필기 기출문제']}
+  {key:'기능장', icon:'M', desc:'전기기능장 필기 기출문제를 회차별로 학습합니다.', levels:['기능장_2006_04_02','기능장_2006_07_16','기능장_2007_04_01'], labels:['2006년 04월 02일 필기 기출문제','2006년 07월 16일 필기 기출문제','2007년 04월 01일 필기 기출문제']}
 ];
 
 const ADVANCED_QUIZ_GROUPS=[
@@ -4759,7 +4759,7 @@ setTimeout(updateHomeCounts,200);
 /* Service Worker 등록 */
 if('serviceWorker' in navigator){
   window.addEventListener('load', ()=>{
-    navigator.serviceWorker.register('sw.js?v=1.05', {updateViaCache:'none'})
+    navigator.serviceWorker.register('sw.js?v=1.08', {updateViaCache:'none'})
       .then(()=>console.log('SW 등록 완료'))
       .catch(e=>console.log('SW 등록 실패',e));
   });

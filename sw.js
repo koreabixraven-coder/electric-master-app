@@ -1,4 +1,4 @@
-const CACHE_NAME = 'electric-master-v1-05-industrial-20020310';
+const CACHE_NAME = 'electric-master-v1-08-master-20070401';
 const ASSETS = [
   './',
   './index.html',
@@ -72,7 +72,32 @@ const ASSETS = [
   './assets/electric_industrial_20020310_q073.png',
   './assets/electric_industrial_20020310_q075.png',
   './assets/electric_industrial_20020310_q079.png',
-  './assets/electric_industrial_20020310_q090.png'
+  './assets/electric_industrial_20020310_q090.png',
+  './assets/electric_function_20020407_q006.png',
+  './assets/electric_function_20020407_q009.png',
+  './assets/electric_function_20020407_q018.png',
+  './assets/electric_function_20020407_q033.png',
+  './assets/electric_function_20020407_q045.png',
+  './assets/electric_function_20020407_q053.png',
+  './assets/electric_master_20060716_q005.png',
+  './assets/electric_master_20060716_q006.png',
+  './assets/electric_master_20060716_q008.png',
+  './assets/electric_master_20060716_q009.png',
+  './assets/electric_master_20060716_q036.png',
+  './assets/electric_master_20060716_q047.png',
+  './assets/electric_master_20060716_q058.png',
+  './assets/electric_master_20070401_q004.png',
+  './assets/electric_master_20070401_q009.png',
+  './assets/electric_master_20070401_q010.png',
+  './assets/electric_master_20070401_q012.png',
+  './assets/electric_master_20070401_q017.png',
+  './assets/electric_master_20070401_q024.png',
+  './assets/electric_master_20070401_q030.png',
+  './assets/electric_master_20070401_q033.png',
+  './assets/electric_master_20070401_q037.png',
+  './assets/electric_master_20070401_q052.png',
+  './assets/electric_master_20070401_q056.png',
+  './assets/electric_master_20070401_q057.png'
 ];
 
 self.addEventListener('install', e => {
@@ -179,3 +204,18 @@ self.addEventListener('fetch', e => {
 // v1.05: 전기산업기사 2002년 03월 10일 필기 100문제 추가.
 // 본문 정답표시와 마지막 1~100 정답표 전수 대조, 불일치 0건.
 // 기존 전기기능장 60문제·전기기사 100문제·이론·레이아웃·TTS·오답·암기완료 로직 유지.
+
+
+// v1.06: 전기기능사 2002년 04월 07일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 260문제·이론·레이아웃·TTS·오답·암기완료 로직 유지.
+
+
+// v1.07: 전기기능장 2006년 07월 16일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 320문제·이론·레이아웃·TTS·오답·암기완료 로직 유지.
+
+
+// v1.08: 전기기능장 2007년 04월 01일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 380문제·이론·레이아웃·TTS·오답·암기완료 로직 유지.
