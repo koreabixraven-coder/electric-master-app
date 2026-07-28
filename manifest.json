@@ -2,7 +2,7 @@
   "name": "RavenBix · 전기기능장 TTS",
   "short_name": "전기기능장",
   "description": "전기기능장 TTS 기출 반복학습 앱",
-  "start_url": "./?v=1.02",
+  "start_url": "./?v=1.05",
   "display": "standalone",
   "background_color": "#0B1F3A",
   "theme_color": "#0B1F3A",
@@ -37,5 +37,5 @@
       "purpose": "any maskable"
     }
   ],
-  "id": "./?app=electric-master-v1.02"
+  "id": "./?app=electric-master-v1.05"
 }

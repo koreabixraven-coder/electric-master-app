@@ -1,4 +1,4 @@
-const CACHE_NAME = 'electric-master-v1-02-menu-final';
+const CACHE_NAME = 'electric-master-v1-05-industrial-20020310';
 const ASSETS = [
   './',
   './index.html',
@@ -10,7 +10,69 @@ const ASSETS = [
   './icon-96.png',
   './icon-128.png',
   './icon-192.png',
-  './icon-512.png'
+  './icon-512.png',
+  './assets/electric_master_20060402_q007.png',
+  './assets/electric_master_20060402_q021.png',
+  './assets/electric_master_20060402_q024.png',
+  './assets/electric_master_20060402_q026.png',
+  './assets/electric_master_20060402_q027.png',
+  './assets/electric_master_20060402_q037.png',
+  './assets/electric_master_20060402_q050.png',
+  './assets/electric_master_20060402_q057.png',
+  './assets/electric_master_20060402_q059.png',
+  './assets/electric_article_20030316_q001.png',
+  './assets/electric_article_20030316_q002.png',
+  './assets/electric_article_20030316_q006.png',
+  './assets/electric_article_20030316_q008.png',
+  './assets/electric_article_20030316_q009.png',
+  './assets/electric_article_20030316_q011.png',
+  './assets/electric_article_20030316_q012.png',
+  './assets/electric_article_20030316_q014.png',
+  './assets/electric_article_20030316_q017.png',
+  './assets/electric_article_20030316_q018.png',
+  './assets/electric_article_20030316_q020.png',
+  './assets/electric_article_20030316_q021.png',
+  './assets/electric_article_20030316_q029.png',
+  './assets/electric_article_20030316_q036.png',
+  './assets/electric_article_20030316_q052.png',
+  './assets/electric_article_20030316_q064.png',
+  './assets/electric_article_20030316_q065.png',
+  './assets/electric_article_20030316_q066.png',
+  './assets/electric_article_20030316_q069.png',
+  './assets/electric_article_20030316_q072.png',
+  './assets/electric_article_20030316_q073.png',
+  './assets/electric_article_20030316_q074.png',
+  './assets/electric_article_20030316_q075.png',
+  './assets/electric_article_20030316_q077.png',
+  './assets/electric_article_20030316_q078.png',
+  './assets/electric_article_20030316_q080.png',
+  './assets/electric_industrial_20020310_q002.png',
+  './assets/electric_industrial_20020310_q003.png',
+  './assets/electric_industrial_20020310_q008.png',
+  './assets/electric_industrial_20020310_q010.png',
+  './assets/electric_industrial_20020310_q011.png',
+  './assets/electric_industrial_20020310_q014.png',
+  './assets/electric_industrial_20020310_q016.png',
+  './assets/electric_industrial_20020310_q017.png',
+  './assets/electric_industrial_20020310_q021.png',
+  './assets/electric_industrial_20020310_q027.png',
+  './assets/electric_industrial_20020310_q028.png',
+  './assets/electric_industrial_20020310_q037.png',
+  './assets/electric_industrial_20020310_q043.png',
+  './assets/electric_industrial_20020310_q048.png',
+  './assets/electric_industrial_20020310_q061.png',
+  './assets/electric_industrial_20020310_q062.png',
+  './assets/electric_industrial_20020310_q063.png',
+  './assets/electric_industrial_20020310_q064.png',
+  './assets/electric_industrial_20020310_q065.png',
+  './assets/electric_industrial_20020310_q066.png',
+  './assets/electric_industrial_20020310_q070.png',
+  './assets/electric_industrial_20020310_q071.png',
+  './assets/electric_industrial_20020310_q072.png',
+  './assets/electric_industrial_20020310_q073.png',
+  './assets/electric_industrial_20020310_q075.png',
+  './assets/electric_industrial_20020310_q079.png',
+  './assets/electric_industrial_20020310_q090.png'
 ];
 
 self.addEventListener('install', e => {
@@ -105,4 +167,15 @@ self.addEventListener('fetch', e => {
 //   모의고사 점수(scoreData) localStorage 영속 저장 추가 (pipe_master_score_v31_21).
 //   가로모드 문제풀이 2분할: 문제 상단고정 + 보기/해설 하단독립스크롤. quizTtsFocus 스크롤 대상 분리.
 
-// v1.02: 메인 3분류, 문제풀이 4등급, 심화학습 5개 중복문제 메뉴 적용. 기존 TTS/데이터 유지.
+// v1.03: 전기기능장 2006년 04월 02일 필기 60문제 적용.
+ // 기능검증용 샘플 문제 전부 제거, 그림·표·공식 9개 이미지 캐시 추가.
+ // 기존 레이아웃·이론·문제풀이·TTS·오답·암기완료 로직 유지.
+
+// v1.04: 전기기사 2003년 03월 16일 필기 100문제 추가.
+// 본문 정답표시와 마지막 1~100 정답표 전수 대조, 불일치 0건.
+// 기존 전기기능장 60문제·이론·레이아웃·TTS·오답·암기완료 로직 유지.
+
+
+// v1.05: 전기산업기사 2002년 03월 10일 필기 100문제 추가.
+// 본문 정답표시와 마지막 1~100 정답표 전수 대조, 불일치 0건.
+// 기존 전기기능장 60문제·전기기사 100문제·이론·레이아웃·TTS·오답·암기완료 로직 유지.
