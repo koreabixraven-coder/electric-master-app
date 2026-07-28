@@ -1,4 +1,4 @@
-const CACHE_NAME = 'electric-master-v1-08-master-20070401';
+const CACHE_NAME = 'electric-master-v1-31-master-repeat-173';
 const ASSETS = [
   './',
   './index.html',
@@ -97,7 +97,235 @@ const ASSETS = [
   './assets/electric_master_20070401_q037.png',
   './assets/electric_master_20070401_q052.png',
   './assets/electric_master_20070401_q056.png',
-  './assets/electric_master_20070401_q057.png'
+  './assets/electric_master_20070401_q057.png',
+  './assets/electric_master_20070715_q003.png',
+  './assets/electric_master_20070715_q005.png',
+  './assets/electric_master_20070715_q007.png',
+  './assets/electric_master_20070715_q009.png',
+  './assets/electric_master_20070715_q012.png',
+  './assets/electric_master_20070715_q025.png',
+  './assets/electric_master_20070715_q030.png',
+  './assets/electric_master_20070715_q032.png',
+  './assets/electric_master_20070715_q037.png',
+  './assets/electric_master_20080330_q041.png',
+  './assets/electric_master_20080713_q018.png',
+  './assets/electric_master_20080713_q020.png',
+  './assets/electric_master_20080713_q021.png',
+  './assets/electric_master_20080713_q028.png',
+  './assets/electric_master_20080713_q029.png',
+  './assets/electric_master_20080713_q031.png',
+  './assets/electric_master_20080713_q032.png',
+  './assets/electric_master_20080713_q034.png',
+  './assets/electric_master_20080713_q038.png',
+  './assets/electric_master_20080713_q043.png',
+  './assets/electric_master_20080713_q057.png',
+  './assets/electric_master_20090329_q002.png',
+  './assets/electric_master_20090329_q012.png',
+  './assets/electric_master_20090329_q028.png',
+  './assets/electric_master_20090329_q032.png',
+  './assets/electric_master_20090329_q040.png',
+  './assets/electric_master_20090329_q044.png',
+  './assets/electric_master_20090329_q052.png',
+  './assets/electric_master_20090329_q053.png',
+  './assets/electric_master_20090329_q055.png',
+  './assets/electric_master_20090712_q006.png',
+  './assets/electric_master_20090712_q013.png',
+  './assets/electric_master_20090712_q019.png',
+  './assets/electric_master_20090712_q025.png',
+  './assets/electric_master_20100328_q003.png',
+  './assets/electric_master_20100328_q009.png',
+  './assets/electric_master_20100328_q035.png',
+  './assets/electric_master_20100328_q050.png',
+  './assets/electric_master_20100328_q056.png',
+  './assets/electric_master_20100328_q058.png',
+  './assets/electric_master_20100711_q004.png',
+  './assets/electric_master_20100711_q010.png',
+  './assets/electric_master_20100711_q019.png',
+  './assets/electric_master_20100711_q029.png',
+  './assets/electric_master_20100711_q034.png',
+  './assets/electric_master_20100711_q035.png',
+  './assets/electric_master_20100711_q045.png',
+  './assets/electric_master_20100711_q053.png',
+  './assets/electric_master_20110417_q011.png',
+  './assets/electric_master_20110417_q026.png',
+  './assets/electric_master_20110417_q034.png',
+  './assets/electric_master_20110417_q055.png',
+  './assets/electric_master_20110731_q001.png',
+  './assets/electric_master_20110731_q003.png',
+  './assets/electric_master_20110731_q006.png',
+  './assets/electric_master_20110731_q010.png',
+  './assets/electric_master_20110731_q011.png',
+  './assets/electric_master_20110731_q012.png',
+  './assets/electric_master_20110731_q015.png',
+  './assets/electric_master_20110731_q023.png',
+  './assets/electric_master_20110731_q030.png',
+  './assets/electric_master_20110731_q035.png',
+  './assets/electric_master_20110731_q038.png',
+  './assets/electric_master_20110731_q039.png',
+  './assets/electric_master_20110731_q049.png',
+  './assets/electric_master_20110731_q052.png',
+  './assets/electric_master_20120408_q007.png',
+  './assets/electric_master_20120408_q009.png',
+  './assets/electric_master_20120408_q012.png',
+  './assets/electric_master_20120408_q024.png',
+  './assets/electric_master_20120408_q028.png',
+  './assets/electric_master_20120408_q049.png',
+  './assets/electric_master_20120408_q056.png',
+  './assets/electric_master_20120722_q004.png',
+  './assets/electric_master_20120722_q009.png',
+  './assets/electric_master_20120722_q010.png',
+  './assets/electric_master_20120722_q013.png',
+  './assets/electric_master_20120722_q014.png',
+  './assets/electric_master_20120722_q024.png',
+  './assets/electric_master_20120722_q027.png',
+  './assets/electric_master_20120722_q029.png',
+  './assets/electric_master_20120722_q036.png',
+  './assets/electric_master_20120722_q039.png',
+  './assets/electric_master_20120722_q044.png',
+  './assets/electric_master_20120722_q049.png',
+  './assets/electric_master_20120722_q052.png',
+  './assets/electric_master_20130414_q008.png',
+  './assets/electric_master_20130414_q012.png',
+  './assets/electric_master_20130414_q018.png',
+  './assets/electric_master_20130414_q023.png',
+  './assets/electric_master_20130414_q027.png',
+  './assets/electric_master_20130414_q028.png',
+  './assets/electric_master_20130414_q030.png',
+  './assets/electric_master_20130414_q037.png',
+  './assets/electric_master_20130414_q040.png',
+  './assets/electric_master_20130414_q049.png',
+  './assets/electric_master_20130721_q004.png',
+  './assets/electric_master_20130721_q010.png',
+  './assets/electric_master_20130721_q015.png',
+  './assets/electric_master_20130721_q016.png',
+  './assets/electric_master_20130721_q024.png',
+  './assets/electric_master_20130721_q027.png',
+  './assets/electric_master_20130721_q036.png',
+  './assets/electric_master_20140406_q002.png',
+  './assets/electric_master_20140406_q007.png',
+  './assets/electric_master_20140406_q010.png',
+  './assets/electric_master_20140406_q014.png',
+  './assets/electric_master_20140406_q018.png',
+  './assets/electric_master_20140406_q020.png',
+  './assets/electric_master_20140406_q021.png',
+  './assets/electric_master_20140406_q023.png',
+  './assets/electric_master_20140406_q031.png',
+  './assets/electric_master_20140406_q043.png',
+  './assets/electric_master_20140406_q044.png',
+  './assets/electric_master_20140406_q046.png',
+  './assets/electric_master_20140406_q049.png',
+  './assets/electric_master_20140406_q057.png',
+  './assets/electric_master_20140720_q003.png',
+  './assets/electric_master_20140720_q007.png',
+  './assets/electric_master_20140720_q010.png',
+  './assets/electric_master_20140720_q013.png',
+  './assets/electric_master_20140720_q014.png',
+  './assets/electric_master_20140720_q017.png',
+  './assets/electric_master_20140720_q019.png',
+  './assets/electric_master_20140720_q021.png',
+  './assets/electric_master_20140720_q025.png',
+  './assets/electric_master_20140720_q033.png',
+  './assets/electric_master_20140720_q043.png',
+  './assets/electric_master_20140720_q047.png',
+  './assets/electric_master_20140720_q056.png',
+  './assets/electric_master_20140720_q057.png',
+  './assets/electric_master_20150404_q011.png',
+  './assets/electric_master_20150404_q016.png',
+  './assets/electric_master_20150404_q021.png',
+  './assets/electric_master_20150404_q028.png',
+  './assets/electric_master_20150404_q029.png',
+  './assets/electric_master_20150404_q030.png',
+  './assets/electric_master_20150404_q034.png',
+  './assets/electric_master_20150404_q035.png',
+  './assets/electric_master_20150404_q048.png',
+  './assets/electric_master_20150404_q049.png',
+  './assets/electric_master_20150404_q054.png',
+  './assets/electric_master_20150404_q059.png',
+  './assets/electric_master_20150719_q002.png',
+  './assets/electric_master_20150719_q004.png',
+  './assets/electric_master_20150719_q005.png',
+  './assets/electric_master_20150719_q012.png',
+  './assets/electric_master_20150719_q018.png',
+  './assets/electric_master_20150719_q022.png',
+  './assets/electric_master_20150719_q027.png',
+  './assets/electric_master_20150719_q030.png',
+  './assets/electric_master_20150719_q035.png',
+  './assets/electric_master_20150719_q038.png',
+  './assets/electric_master_20150719_q049.png',
+  './assets/electric_master_20160402_q003.png',
+  './assets/electric_master_20160402_q009.png',
+  './assets/electric_master_20160402_q012.png',
+  './assets/electric_master_20160402_q013.png',
+  './assets/electric_master_20160402_q017.png',
+  './assets/electric_master_20160402_q021.png',
+  './assets/electric_master_20160402_q022.png',
+  './assets/electric_master_20160402_q036.png',
+  './assets/electric_master_20160402_q038.png',
+  './assets/electric_master_20160402_q039.png',
+  './assets/electric_master_20160402_q041.png',
+  './assets/electric_master_20160710_q008.png',
+  './assets/electric_master_20160710_q011.png',
+  './assets/electric_master_20160710_q013.png',
+  './assets/electric_master_20160710_q018.png',
+  './assets/electric_master_20160710_q023.png',
+  './assets/electric_master_20160710_q027.png',
+  './assets/electric_master_20160710_q029.png',
+  './assets/electric_master_20160710_q038.png',
+  './assets/electric_master_20160710_q039.png',
+  './assets/electric_master_20160710_q044.png',
+  './assets/electric_master_20160710_q047.png',
+  './assets/electric_master_20160710_q051.png',
+  './assets/electric_master_20160710_q055.png',
+  './assets/electric_master_20160710_q056.png',
+  './assets/electric_master_20160710_q058.png',
+  './assets/electric_master_20160710_q060.png',
+  './assets/electric_master_20170305_q004.png',
+  './assets/electric_master_20170305_q006.png',
+  './assets/electric_master_20170305_q017.png',
+  './assets/electric_master_20170305_q022.png',
+  './assets/electric_master_20170305_q027.png',
+  './assets/electric_master_20170305_q031.png',
+  './assets/electric_master_20170305_q033.png',
+  './assets/electric_master_20170305_q040.png',
+  './assets/electric_master_20170305_q053.png',
+  './assets/electric_master_20170708_q002.png',
+  './assets/electric_master_20170708_q013.png',
+  './assets/electric_master_20170708_q020.png',
+  './assets/electric_master_20170708_q021.png',
+  './assets/electric_master_20170708_q025.png',
+  './assets/electric_master_20170708_q027.png',
+  './assets/electric_master_20170708_q033.png',
+  './assets/electric_master_20170708_q034.png',
+  './assets/electric_master_20170708_q044.png',
+  './assets/electric_master_20170708_q047.png',
+  './assets/electric_master_20170708_q058.png',
+  './assets/electric_master_20170708_q059.png',
+  './assets/electric_master_20180331_q002.png',
+  './assets/electric_master_20180331_q005.png',
+  './assets/electric_master_20180331_q006.png',
+  './assets/electric_master_20180331_q007.png',
+  './assets/electric_master_20180331_q009.png',
+  './assets/electric_master_20180331_q010.png',
+  './assets/electric_master_20180331_q016.png',
+  './assets/electric_master_20180331_q020.png',
+  './assets/electric_master_20180331_q027.png',
+  './assets/electric_master_20180331_q031.png',
+  './assets/electric_master_20180331_q032.png',
+  './assets/electric_master_20180331_q039.png',
+  './assets/electric_master_20180331_q056.png',
+  './assets/electric_master_20180331_q002.png',
+  './assets/electric_master_20180331_q005.png',
+  './assets/electric_master_20180331_q006.png',
+  './assets/electric_master_20180331_q007.png',
+  './assets/electric_master_20180331_q009.png',
+  './assets/electric_master_20180331_q010.png',
+  './assets/electric_master_20180331_q016.png',
+  './assets/electric_master_20180331_q020.png',
+  './assets/electric_master_20180331_q027.png',
+  './assets/electric_master_20180331_q031.png',
+  './assets/electric_master_20180331_q032.png',
+  './assets/electric_master_20180331_q039.png',
+  './assets/electric_master_20180331_q056.png',
 ];
 
 self.addEventListener('install', e => {
@@ -219,3 +447,112 @@ self.addEventListener('fetch', e => {
 // v1.08: 전기기능장 2007년 04월 01일 필기 60문제 추가.
 // 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
 // 기존 380문제·이론·레이아웃·TTS·오답·암기완료 로직 유지.
+
+
+// v1.09: 전기기능장 2007년 07월 15일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 440문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.10: 전기기능장 2008년 03월 30일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 500문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.11: 전기기능장 2008년 07월 13일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 560문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.12: 전기기능장 2009년 03월 29일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 620문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.13: 전기기능장 2009년 07월 12일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 680문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.14: 전기기능장 2010년 03월 28일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 740문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.15: 전기기능장 2010년 07월 11일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 800문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.16: 전기기능장 2011년 04월 17일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 860문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.17: 전기기능장 2011년 07월 31일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 920문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.18: 전기기능장 2012년 04월 08일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 980문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.19: 전기기능장 2012년 07월 22일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 1040문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.20: 전기기능장 2013년 04월 14일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 1100문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.23: 전기기능장 2014년 07월 20일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 1280문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.24: 전기기능장 2015년 04월 04일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 1340문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.25: 전기기능장 2015년 07월 19일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 1400문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.26: 전기기능장 2016년 04월 02일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 1460문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.27: 전기기능장 2016년 07월 10일 필기 60문제 추가.
+// 본문 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 1520문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.28: 전기기능장 2017년 03월 05일 필기 60문제 추가.
+// 본문 검은 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 1580문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.29: 전기기능장 2017년 07월 08일 필기 60문제 추가.
+// 본문 검은 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 1640문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.30: 전기기능장 2018년 03월 31일 필기 60문제 추가.
+// 본문 검은 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 1700문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.30: 전기기능장 2018년 03월 31일 필기 60문제 추가.
+// 본문 검은 정답표시와 마지막 1~60 정답표 전수 대조, 불일치 0건.
+// 기존 1700문제·이론·레이아웃·TTS·오답·암기 로직 유지.
+
+
+// v1.31: 심화학습 기능장 중복 대표 173문제 추가.
+// 신규 이미지 없음. 기존 캐시 자산과 강제 업데이트 로직 유지.
