@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0B1F3A">
-<!-- v1.31 MASTER_REPEAT_173: 기존 레이아웃·이론·TTS 로직 유지, 심화학습 기능장 중복 대표 173문제 추가 -->
+<!-- v1.32 ARTICLE_BATCH_10_1000: 기존 레이아웃·이론·TTS 로직 유지, 심화학습 기능장 중복 대표 173문제 추가 -->
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <title>RavenBix · 전기기능장</title>
-<link rel="manifest" href="manifest.json?v=1.31">
+<link rel="manifest" href="manifest.json?v=1.32">
 <link rel="apple-touch-icon" href="icon-192.png">
-<script src="theory.js?v=1.31"></script>
-<script src="questions.js?v=1.31"></script>
+<script src="theory.js?v=1.32"></script>
+<script src="questions.js?v=1.32"></script>
 <script>
 /* ── v30.22 패드 화면 확장 설정 선적용 ── */
 (function(){
@@ -1441,12 +1441,12 @@
 <div class="settings-backdrop" id="settingsBackdrop" onclick="closeSettings(event)"></div>
   <!-- 설정 패널 -->
   <div class="settings-panel global-settings" id="settingsPanel" onclick="event.stopPropagation()">
-    <div class="settings-head"><div class="settings-head-title">⚙ 음성·자동진행 설정 <span style="font-size:10px;color:#BA7517;">v1.31 ELECTRIC_MASTER MASTER_REPEAT_173</span></div><button class="settings-close" onclick="closeSettings(event)">×</button></div>
+    <div class="settings-head"><div class="settings-head-title">⚙ 음성·자동진행 설정 <span style="font-size:10px;color:#BA7517;">v1.32 ELECTRIC_MASTER ARTICLE_BATCH_10_1000</span></div><button class="settings-close" onclick="closeSettings(event)">×</button></div>
     <div class="settings-save-row">
       <button class="test-btn save-main" onclick="saveSettingsFromUI()">💾 설정 저장</button>
       <button class="test-btn restore-main" onclick="resetSettingsToDefault()">↩ 기본값 복원</button>
     </div>
-    <p class="s-hint" style="color:#9FE1CB;">v1.31 ELECTRIC_MASTER MASTER_REPEAT_173. 휴대폰 이동중청취 노터치/전체화면을 보강했습니다.</p>
+    <p class="s-hint" style="color:#9FE1CB;">v1.32 ELECTRIC_MASTER ARTICLE_BATCH_10_1000. 휴대폰 이동중청취 노터치/전체화면을 보강했습니다.</p>
 <div class="settings-dirty-note" id="settingsDirtyNote">변경사항이 있습니다. 저장 버튼을 눌러야 다음 실행에도 유지됩니다.</div>
 
     <div class="s-title">
@@ -2019,7 +2019,7 @@ applyRestoreRepeatPatch();
    기출회차(41~62회)와 기출복원(2019~2025)에서 2회 이상 출제된 문제를
    고유 클러스터로 취합하여 가상 DB 레벨을 생성합니다. */
 function buildRepeatQuizDB(){
-  /* v1.31 ELECTRIC_MASTER MASTER_REPEAT_173
+  /* v1.32 ELECTRIC_MASTER ARTICLE_BATCH_10_1000
      샘플 DB에 포함된 _repeatRefs와 별도 중복핵심 레벨을 그대로 사용합니다.
      실제 기출 데이터 입력 후에는 전기기능장 과목별/중복 반복문제 빌더로 확장합니다. */
   try{
@@ -2931,7 +2931,7 @@ function theoryReadAll(manualStart=true){
 }
 
 
-/* ── v1.31 문제풀이 유지 + 심화학습 기능장 중복문제 173문제 연결 ── */
+/* ── v1.32 전기기사 10개 회차 1000문제 일괄 추가 ── */
 let curQuizMenu='exam';
 let curQuizGroup='기능장';
 let quizPrepared=false;
@@ -2939,7 +2939,7 @@ let quizPrepared=false;
 const EXAM_QUIZ_GROUPS=[
   {key:'기능사', icon:'F', desc:'전기기능사 기출문제와 회차별 문제를 학습합니다.', levels:['기능사_2002_04_07'], labels:['2002년 04월 07일 필기 기출문제']},
   {key:'산업기사', icon:'I', desc:'전기산업기사 기출문제와 회차별 문제를 학습합니다.', levels:['산업기사_2002_03_10'], labels:['2002년 03월 10일 필기 기출문제']},
-  {key:'기사', icon:'E', desc:'전기기사 기출문제와 회차별 문제를 학습합니다.', levels:['기사_2003_03_16'], labels:['2003년 03월 16일 필기 기출문제']},
+  {key:'기사', icon:'E', desc:'전기기사 기출문제와 회차별 문제를 학습합니다.', levels:["기사_2003_03_16","기사_2003_05_25","기사_2003_08_10","기사_2004_03_07","기사_2004_05_23","기사_2004_08_08","기사_2005_03_06","기사_2005_05_29","기사_2005_08_07","기사_2006_03_05","기사_2006_05_14"], labels:["2003년 03월 16일 필기 기출문제","2003년 05월 25일 필기 기출문제","2003년 08월 10일 필기 기출문제","2004년 03월 07일 필기 기출문제","2004년 05월 23일 필기 기출문제","2004년 08월 08일 필기 기출문제","2005년 03월 06일 필기 기출문제","2005년 05월 29일 필기 기출문제","2005년 08월 07일 필기 기출문제","2006년 03월 05일 필기 기출문제","2006년 05월 14일 필기 기출문제"]},
   {key:'기능장', icon:'M', desc:'전기기능장 필기 기출문제를 회차별로 학습합니다.', levels:['기능장_2006_04_02','기능장_2006_07_16','기능장_2007_04_01','기능장_2007_07_15','기능장_2008_03_30','기능장_2008_07_13','기능장_2009_03_29','기능장_2009_07_12','기능장_2010_03_28','기능장_2010_07_11','기능장_2011_04_17','기능장_2011_07_31','기능장_2012_04_08','기능장_2012_07_22','기능장_2013_04_14','기능장_2013_07_21','기능장_2014_04_06','기능장_2014_07_20','기능장_2015_04_04','기능장_2015_07_19','기능장_2016_04_02','기능장_2016_07_10','기능장_2017_03_05','기능장_2017_07_08','기능장_2018_03_31'], labels:['2006년 04월 02일 필기 기출문제','2006년 07월 16일 필기 기출문제','2007년 04월 01일 필기 기출문제','2007년 07월 15일 필기 기출문제','2008년 03월 30일 필기 기출문제','2008년 07월 13일 필기 기출문제','2009년 03월 29일 필기 기출문제','2009년 07월 12일 필기 기출문제','2010년 03월 28일 필기 기출문제','2010년 07월 11일 필기 기출문제','2011년 04월 17일 필기 기출문제','2011년 07월 31일 필기 기출문제','2012년 04월 08일 필기 기출문제','2012년 07월 22일 필기 기출문제','2013년 04월 14일 필기 기출문제','2013년 07월 21일 필기 기출문제','2014년 04월 06일 필기 기출문제','2014년 07월 20일 필기 기출문제','2015년 04월 04일 필기 기출문제','2015년 07월 19일 필기 기출문제','2016년 04월 02일 필기 기출문제','2016년 07월 10일 필기 기출문제','2017년 03월 05일 필기 기출문제','2017년 07월 08일 필기 기출문제','2018년 03월 31일 필기 기출문제']}
 ];
 
@@ -4759,7 +4759,7 @@ setTimeout(updateHomeCounts,200);
 /* Service Worker 등록 */
 if('serviceWorker' in navigator){
   window.addEventListener('load', ()=>{
-    navigator.serviceWorker.register('sw.js?v=1.31', {updateViaCache:'none'})
+    navigator.serviceWorker.register('sw.js?v=1.32', {updateViaCache:'none'})
       .then(()=>console.log('SW 등록 완료'))
       .catch(e=>console.log('SW 등록 실패',e));
   });
