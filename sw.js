@@ -1,4 +1,4 @@
-const CACHE_NAME = 'electric-master-v1-37-article-complete-59-5900';
+const CACHE_NAME = 'electric-master-v1-38-article-repeat-607';
 const ASSETS = [
   './',
   './index.html',
@@ -3129,3 +3129,7 @@ self.addEventListener('fetch', e => {
 // v1.37: 누락분 포함 전기기사 8개 회차 800문제 최종 추가, 기사 전체 5900문제.
 // 본문 검은 정답 표시와 최종 정답표 불일치 시 사용자 지시에 따라 본문 표시를 적용.
 // 신규 원본 그림·수식 이미지 캐시 등록. 기존 캐시 삭제·skipWaiting·clients.claim 유지.
+
+
+// v1.38: 심화학습 기사 중복 대표 607문제 추가. 신규 이미지 없음.
+// 기존 전기기사 59회 5900문제 및 모든 assets를 유지하며 캐시 버전만 갱신.

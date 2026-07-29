@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0B1F3A">
-<!-- v1.37 ARTICLE_COMPLETE_59_5900: 기존 레이아웃·이론·TTS·중복학습 로직 유지, 전기기사 전체 59개 회차·총 5900문제 수록 -->
+<!-- v1.38 ARTICLE_REPEAT_607: 기존 레이아웃·이론·TTS·중복학습 로직 유지, 전기기사 전체 59개 회차·총 5900문제 수록 -->
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <title>RavenBix · 전기기능장</title>
-<link rel="manifest" href="manifest.json?v=1.37">
+<link rel="manifest" href="manifest.json?v=1.38">
 <link rel="apple-touch-icon" href="icon-192.png">
-<script src="theory.js?v=1.37"></script>
-<script src="questions.js?v=1.37"></script>
+<script src="theory.js?v=1.38"></script>
+<script src="questions.js?v=1.38"></script>
 <script>
 /* ── v30.22 패드 화면 확장 설정 선적용 ── */
 (function(){
@@ -2019,9 +2019,8 @@ applyRestoreRepeatPatch();
    기출회차(41~62회)와 기출복원(2019~2025)에서 2회 이상 출제된 문제를
    고유 클러스터로 취합하여 가상 DB 레벨을 생성합니다. */
 function buildRepeatQuizDB(){
-  /* v1.37 ELECTRIC_MASTER ARTICLE_COMPLETE_59_5900
-     샘플 DB에 포함된 _repeatRefs와 별도 중복핵심 레벨을 그대로 사용합니다.
-     실제 기출 데이터 입력 후에는 전기기능장 과목별/중복 반복문제 빌더로 확장합니다. */
+  /* v1.38 ELECTRIC_MASTER ARTICLE_REPEAT_607
+     기능장·기사 중복 대표 레벨의 _repeatRefs 메타데이터를 그대로 사용합니다. */
   try{
     if(typeof DB==='undefined' || !DB) return;
     Object.keys(DB).forEach(lv=>{
@@ -2931,7 +2930,7 @@ function theoryReadAll(manualStart=true){
 }
 
 
-/* ── v1.37 전기기사 전체 59개 회차 5900문제 최종 수록 ── */
+/* ── v1.38 전기기사 59개 회차 중복 대표 607문제 수록 ── */
 let curQuizMenu='exam';
 let curQuizGroup='기능장';
 let quizPrepared=false;
@@ -2946,7 +2945,7 @@ const EXAM_QUIZ_GROUPS=[
 const ADVANCED_QUIZ_GROUPS=[
   {key:'기능사 중복문제', icon:'F', desc:'전기기능사에서 반복 출제된 대표문제를 학습합니다.', levels:[], labels:[]},
   {key:'산업기사 중복문제', icon:'I', desc:'전기산업기사에서 반복 출제된 대표문제를 학습합니다.', levels:[], labels:[]},
-  {key:'기사 중복문제', icon:'E', desc:'전기기사에서 반복 출제된 대표문제를 학습합니다.', levels:[], labels:[]},
+  {key:'기사 중복문제', icon:'E', desc:'전기기사 59개 기출회차에서 2회 이상 반복 출제된 대표문제를 학습합니다.', levels:['기사_중복문제'], labels:['2003~2022 전기기사 기출 중복 대표문제 607선']},
   {key:'기능장 중복문제', icon:'M', desc:'전기기능장 25개 기출회차에서 2회 이상 반복 출제된 대표문제를 학습합니다.', levels:['기능장_중복문제'], labels:['2006~2018 기능장 기출 중복 대표문제']},
   {key:'통합 중복문제', icon:'★', desc:'기능사·산업기사·기사·기능장에 공통으로 출제된 중복문제를 학습합니다.', levels:[], labels:[]}
 ];
@@ -4759,7 +4758,7 @@ setTimeout(updateHomeCounts,200);
 /* Service Worker 등록 */
 if('serviceWorker' in navigator){
   window.addEventListener('load', ()=>{
-    navigator.serviceWorker.register('sw.js?v=1.37', {updateViaCache:'none'})
+    navigator.serviceWorker.register('sw.js?v=1.38', {updateViaCache:'none'})
       .then(()=>console.log('SW 등록 완료'))
       .catch(e=>console.log('SW 등록 실패',e));
   });
