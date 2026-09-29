@@ -1,9 +1,10 @@
-const CACHE_NAME = 'electric-master-v1-50-function-final-57-3420-repeat-288';
+const CACHE_NAME = 'electric-master-v1-51-master-25-1500-tts-korean';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
   './questions.js',
+  './master_tts.js',
   './theory.js',
   './sw.js',
   './icon-72.png',

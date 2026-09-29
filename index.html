@@ -9,10 +9,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <title>RavenBix · 전기기능장</title>
-<link rel="manifest" href="manifest.json?v=1.50">
+<link rel="manifest" href="manifest.json?v=1.51">
 <link rel="apple-touch-icon" href="icon-192.png">
-<script src="theory.js?v=1.50"></script>
-<script src="questions.js?v=1.50"></script>
+<script src="theory.js?v=1.51"></script>
+<script src="questions.js?v=1.51"></script>
+<script src="master_tts.js?v=1.51"></script>
 <script>
 /* ── v30.22 패드 화면 확장 설정 선적용 ── */
 (function(){
@@ -4095,7 +4096,8 @@ function spkAns(L,q,cb){
   quizTtsFocus(correctEl,'정답 '+ansNo(q)+' 읽는 중');
   /* v31.21: skipExplanation 설정 시 정답+보기만 읽고 해설 건너뜀 */
   const skipEx=appSettings && appSettings.skipExplanation;
-  const ansText=skipEx ? '정답은 '+ansNo(q)+', '+q.opts[q.ans]+'입니다.' : '정답은 '+ansNo(q)+'입니다.';
+  const ansRead=(Array.isArray(q.ttsOpts)&&q.ttsOpts[q.ans])?q.ttsOpts[q.ans]:q.opts[q.ans];
+  const ansText=skipEx ? '정답은 '+ansNo(q)+', '+ansRead+'입니다.' : '정답은 '+ansNo(q)+'입니다.';
   spkQ(ansText,()=>{
     if(skipEx){ if(cb) cb(); return; }
     setTimeout(()=>{
@@ -4125,12 +4127,14 @@ function spkAns(L,q,cb){
 }
 function spkOpts(opts,labels,cb){
   let i=0;
+  const curQ=(Array.isArray(Qs)&&Qs.length&&Qs[cur])?Qs[cur]:null;
+  const readOpts=(curQ&&Array.isArray(curQ.ttsOpts)&&curQ.ttsOpts.length===opts.length)?curQ.ttsOpts:opts;
   function go(){
     if(i>=opts.length){if(cb)cb();return;}
     const curIdx=i;
     const optEl=document.querySelectorAll('#opts .opt')[curIdx];
     quizTtsFocus(optEl, labels[curIdx]+' 보기 읽는 중');
-    const txt=labels[i]+'. '+opts[i]; i++;
+    const txt=labels[i]+'. '+readOpts[i]; i++;
     spkQ(txt,()=>{
       if(pb>0&&i<opts.length){pbTimer=setTimeout(()=>{if(paused) resumeTask=go; else go();},pb*1000);}
       else go();
@@ -4357,7 +4361,7 @@ function autoPlay(){
   const q=Qs[cur], L=NL[ns];
   setSt('🔊 문제 읽는 중...');
   quizTtsFocus(document.querySelector('#screenQuiz .q-card') || document.getElementById('qText'),'문제 읽는 중');
-  spkQ('문제 '+(cur+1)+'번. '+q.q,()=>{
+  spkQ('문제 '+(cur+1)+'번. '+(q.ttsQ||q.q),()=>{
     if(!driveOn) return;
     setSt('🔊 보기 읽는 중...');
     spkOpts(q.opts,L,()=>{
@@ -4758,7 +4762,7 @@ setTimeout(updateHomeCounts,200);
 /* Service Worker 등록 */
 if('serviceWorker' in navigator){
   window.addEventListener('load', ()=>{
-    navigator.serviceWorker.register('sw.js?v=1.50', {updateViaCache:'none'})
+    navigator.serviceWorker.register('sw.js?v=1.51', {updateViaCache:'none'})
       .then(()=>console.log('SW 등록 완료'))
       .catch(e=>console.log('SW 등록 실패',e));
   });
@@ -4834,7 +4838,7 @@ function quizTtsFocus(el,label){
 }
 function quizSpeakProblem(q,cb){
   quizTtsFocus(document.querySelector('#screenQuiz .q-card') || document.getElementById('qText'),'문제 읽는 중');
-  spkQ('문제. '+q.q,cb);
+  spkQ('문제. '+(q.ttsQ||q.q),cb);
 }
 function stopQuizTts(){
   normalFullAuto=false;
